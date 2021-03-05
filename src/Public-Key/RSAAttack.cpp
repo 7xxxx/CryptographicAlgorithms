@@ -5,8 +5,6 @@
 #include <vector>
 #include "PublicKeyAlgorithmBox.h"
 #include "RSAAttack.h"
-#include <iostream>
-#include <cmath>
 
 using namespace std;
 using namespace CryptoPP;

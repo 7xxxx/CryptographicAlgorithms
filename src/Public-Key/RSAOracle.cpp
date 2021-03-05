@@ -2,8 +2,6 @@
  * RSAOracle.cpp
  */
 
-#include <cassert>
-#include <iostream>
 #include "RSAOracle.h"
 #include "PublicKeyAlgorithmBox.h"
 

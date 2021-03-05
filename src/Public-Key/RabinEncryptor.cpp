@@ -3,7 +3,6 @@
  */
 
 #include "RabinEncryptor.h"
-#include <cstring>
 #include <sstream>
 
 RabinEncryptor::RabinEncryptor(const Integer& n, const Integer& padding) {

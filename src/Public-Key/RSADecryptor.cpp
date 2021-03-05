@@ -5,8 +5,6 @@
 #include "PublicKeyAlgorithmBox.h"
 #include "RSADecryptor.h"
 
-#include <iostream>
-
 using namespace std;
 using namespace CryptoPP;
 

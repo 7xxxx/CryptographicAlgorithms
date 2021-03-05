@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <vector>
-#include "osrng.h"
 #include "PublicKeyAlgorithmBox.h"
 #include "RabinDecryptor.h"
 #include "RabinEncryptor.h"
