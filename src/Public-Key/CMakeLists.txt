@@ -1,3 +1,8 @@
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# + CMakeLists.txt
+# + Folder: src/Praktikum-Public-Key
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 FIND_PACKAGE(CryptoPP REQUIRED)
 FIND_PACKAGE(Threads REQUIRED)
 

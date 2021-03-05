@@ -9,6 +9,7 @@ void integerExercise() {
 	/*********************************************************************
 	 * Aufgabe 2.
 	 *********************************************************************/
+    cout << "\nAufgabe 2" << endl;
 	 Integer a = Integer(23975);
 	 Integer b = Integer("12345678900987654321");
 	 Integer c = Integer::Power2(10);
@@ -22,6 +23,7 @@ void eeaExercise() {
 	/*********************************************************************
 	 * Aufgabe 3.
 	 *********************************************************************/
+	cout << "\nAufgabe 3" << endl;
     PublicKeyAlgorithmBox pk_box;
     //a)
     Integer a = 2987, b = 1279865, d, x, y;
@@ -44,14 +46,26 @@ void invExercise() {
 	 * Aufgabe 4.
 	 *********************************************************************/
 	 //TODO: Fix c), ergebnis negativ, deshalb keine ausgabe (sollte 53494466 ergeben)
+    cout << "\nAufgabe 4" << endl;
+
     PublicKeyAlgorithmBox pk_box;
     Integer a_inv_a, a_inv_b, a_inv_c;
-    pk_box.multInverse(10353, 820343, a_inv_a);
-    pk_box.multInverse(10353, 820344, a_inv_b);
-    pk_box.multInverse(562312, 57913313, a_inv_c);
-    cout << "a_inv a): " << a_inv_a << endl;
-    cout << "a_inv b):" << a_inv_b << endl;
-    cout << "a_inv c): " << a_inv_c << endl;
+
+
+    if(pk_box.multInverse(Integer("10353"), Integer("820343"), a_inv_a))
+        cout << "10353 mod 820343 = " << a_inv_a << endl;
+    else
+        cout << "nicht invertierbar" << endl;
+
+    if(pk_box.multInverse(Integer("10353"), Integer("820344"), a_inv_b))
+        cout << "10353 mod 820344 = " << a_inv_b << endl;
+    else
+        cout << "nicht invertierbar" << endl;
+
+    if(pk_box.multInverse(Integer("562312"), Integer("57913313"), a_inv_c))
+        cout << "562312 mod 57913313 = " << a_inv_c << endl;
+    else
+        cout << "nicht invertierbar" << endl;
 
 }
 
@@ -60,7 +74,7 @@ void modexpExercise() {
 	 * Aufgabe 5.
 	 *********************************************************************/
 	 PublicKeyAlgorithmBox pk_box;
-
+     cout << "\nAufgabe 5" << endl;
 	 cout << endl;
 	 cout << "Modulare Exponentiation" << endl;
 	 cout << "---------------------------" << endl;
@@ -76,16 +90,15 @@ void randExercise() {
 	/*********************************************************************
 	 * Aufgabe 6.
 	 *********************************************************************/
-
+    cout << "\nAufgabe 6" << endl;
 	PublicKeyAlgorithmBox pk_box;
 
     cout << endl;
     cout << "Random Numbers" << endl;
     cout << "---------------------------" << endl;
 
-    Integer x = 2;
-
-    cout << pk_box.randomInteger(x) << endl;
+    cout << pk_box.randomInteger(128) << endl;
+    cout << pk_box.randomInteger(1024) << endl;
 
 }
 
@@ -93,6 +106,22 @@ void millerRabinExercise() {
 	/*********************************************************************
 	 * Aufgabe 7.
 	 *********************************************************************/
+    cout << "\nAufgabe 7" << endl;
+	PublicKeyAlgorithmBox pk_box;
+
+    cout << endl;
+    cout << "Miller Rabin Test" << endl;
+    cout << "---------------------------" << endl;
+
+    Integer a = Integer("279226292160650115722581212551219487007");
+    Integer b = Integer("247278711133334795867191516244139839983");
+    Integer c = Integer("192172622525902080249109244057747132167");
+    Integer d = Integer("177387942943728133030691912202779547031");
+
+	cout << "a: " << pk_box.millerRabinTest(a, 100) << endl;
+	cout << "b: " << pk_box.millerRabinTest(b, 100) << endl;
+	cout << "c: " << pk_box.millerRabinTest(c, 100) << endl;
+	cout << "d: " << pk_box.millerRabinTest(d, 100) << endl;
 }
 
 
